@@ -14,6 +14,7 @@ jobs:
         with:
           node-version: '14'
           registry-url: https://registry.npmjs.org
+      - run: yarn add @blzd-dev/uikit
       - run: yarn install --frozen-lockfile
       - run: yarn build
         env:
