@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import Page from './layout/Page'
 
+import logo from '../assets/logo.png';
+
 const Wrapper = styled(Page)`
   display: flex;
   justify-content: center;
@@ -34,7 +36,7 @@ const PageLoader: React.FC = () => {
       <LogoIcon>
         <img
           style={{ height: 86 }}
-          src="https://raw.githubusercontent.com/blzd-dev/blzd-frontend/master/public/images/blzd/logo.png"
+          src={logo}
           alt="logo"
         />
       </LogoIcon>

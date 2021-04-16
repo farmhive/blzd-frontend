@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import useRefresh from 'hooks/useRefresh'
 import { getWeb3NoAccount } from 'utils/web3'
-import { fetchFarmsPublicDataAsync, fetchPoolsUserDataAsync, fetchPoolsPublicDataAsync, setBlock } from './actions'
+import { fetchFarmsPublicDataAsync, setBlock } from './actions'
 import { State, Farm, Pool, Block, PriceState } from './types'
 import { QuoteToken } from '../config/constants/types'
 import { fetchPrices } from './prices'
@@ -15,7 +15,6 @@ export const useFetchPublicData = () => {
   const { slowRefresh } = useRefresh()
   useEffect(() => {
     dispatch(fetchFarmsPublicDataAsync())
-    dispatch(fetchPoolsPublicDataAsync())
   }, [dispatch, slowRefresh])
 
   useEffect(() => {
@@ -58,27 +57,6 @@ export const useFarmUser = (pid) => {
 }
 
 // Pools
-
-export const usePools = (account): Pool[] => {
-  const { fastRefresh } = useRefresh()
-  const dispatch = useDispatch()
-  useEffect(() => {
-    if (account) {
-      dispatch(fetchPoolsUserDataAsync(account))
-    }
-  }, [account, dispatch, fastRefresh])
-
-  const pools = useSelector((state: State) => state.pools.data)
-  return pools
-}
-
-export const usePoolFromPid = (sousId): Pool => {
-  const pool = useSelector((state: State) => state.pools.data.find((p) => p.sousId === sousId))
-  return pool
-}
-
-// Prices
-
 export const usePriceBnbBusd = (): BigNumber => {
   const pid = 3 // BNB-BUSD LP
   const farm = useFarmFromPid(pid)

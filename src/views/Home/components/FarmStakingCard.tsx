@@ -8,12 +8,31 @@ import useFarmsWithBalance from 'hooks/useFarmsWithBalance'
 import UnlockButton from 'components/UnlockButton'
 import BlzdHarvestBalance from './BlzdHarvestBalance'
 import BlzdWalletBalance from './BlzdWalletBalance'
+import farmer from '../../../assets/farmer.png'
+import logo from '../../../assets/logo.png'
+import circle from '../../../assets/circle-cropped.png'
 
 const StyledFarmStakingCard = styled(Card)`
-  background-image: url('https://raw.githubusercontent.com/blzd-dev/blzd-frontend/master/public/images/blzd/2a.png');
+  &:before {
+
+  background-image: url(${farmer});
   background-size: 256px;
   background-repeat: no-repeat;
   background-position: top right;
+  opacity:0.4;
+  content: "";
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%;  
+  opacity: .4; 
+  z-index: -1;
+
+  }
+
+  position: relative;
+  z-index: 1;
   min-height: 376px;
 `
 
@@ -98,7 +117,7 @@ const FarmedStakingCard = () => {
         </Heading>
         <TokenImageWrapper>
           <CardImage
-            src="https://raw.githubusercontent.com/blzd-dev/blzd-frontend/master/public/images/blzd/2.png"
+            src={circle}
             alt="blzd logo"
             width={64}
             height={64}
@@ -115,17 +134,17 @@ const FarmedStakingCard = () => {
         </TokenImageWrapper>
         <Block>
           <BlzdHarvestBalance />
-          <Label>{TranslateString(544, 'BLZD to Harvest')}</Label>
+          <Label>{TranslateString(544, 'FHIVE to Harvest')}</Label>
         </Block>
         <Block>
           <BlzdWalletBalance />
-          <Label>{TranslateString(546, 'BLZD in Wallet')}</Label>
+          <Label>{TranslateString(546, 'FHIVE in Wallet')}</Label>
         </Block>
         <Actions>
           {account ? (
             <Button id="harvest-all" disabled={balancesWithValue.length <= 0 || pendingTx} onClick={harvestAllFarms}>
               {pendingTx
-                ? TranslateString(548, 'Collecting BLZD')
+                ? TranslateString(548, 'Collecting FHIVE')
                 : TranslateString(999, `Harvest all (${balancesWithValue.length})`)}
             </Button>
           ) : (

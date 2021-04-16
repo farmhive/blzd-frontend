@@ -7,11 +7,6 @@ const config: MenuEntry[] = [
     href: '/',
   },
   {
-    label: 'BLZD to xBLZD',
-    icon: 'TradeIcon',
-    href: '/xBLZD',
-  },
-  {
     label: 'Trade',
     icon: 'TradeIcon',
     items: [
@@ -38,17 +33,12 @@ const config: MenuEntry[] = [
     href: '/caves',
   },
   {
-    label: 'Blizzard',
-    icon: 'PoolIcon',
-    href: '/pools',
-  },
-  {
     label: 'Info',
     icon: 'InfoIcon',
     items: [
       {
-        label: 'PancakeSwap',
-        href: 'https://pancakeswap.info/token/0x57067A6BD75c0E95a6A5f158455926e43E79BeB0',
+        label: 'HoneySwap',
+        href: 'https://info.honeyswap.org/token/0x57067A6BD75c0E95a6A5f158455926e43E79BeB0',
         external: true,
       },
     ],
@@ -56,13 +46,13 @@ const config: MenuEntry[] = [
   {
     label: 'Github',
     icon: 'GithubIcon',
-    href: 'https://github.com/blzd-dev',
+    href: 'https://github.com/farmhive',
     external: true,
   },
   {
     label: 'Blog',
     icon: 'MediumIcon',
-    href: 'https://blizzardmoney.medium.com',
+    href: 'https://farmhive.medium.com',
     external: true,
   },
   {

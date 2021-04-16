@@ -9,9 +9,11 @@ import BlzdStats from './components/BlzdStats'
 import TotalValueLockedCard from './components/TotalValueLockedCard'
 // import TwitterCard from './components/TwitterCard'
 
+import logo from '../../assets/logo.png'
+
 const Hero = styled.div`
   align-items: center;
-  background-image: url('https://raw.githubusercontent.com/blzd-dev/blzd-frontend/master/public/images/blzd/3.png');
+  background-image: url(${logo});
   background-size: 110px;
   background-repeat: no-repeat;
   background-position: top center;
@@ -24,8 +26,8 @@ const Hero = styled.div`
   text-align: center;
 
   ${({ theme }) => theme.mediaQueries.lg} {
-    background-image: url('https://raw.githubusercontent.com/blzd-dev/blzd-frontend/master/public/images/blzd/3.png'),
-      url('https://raw.githubusercontent.com/blzd-dev/blzd-frontend/master/public/images/blzd/3b.png');
+    background-image: url(${logo}),
+    url(${logo});
     background-size: 150px;
     background-position: left center, right center;
     height: 165px;
@@ -63,9 +65,9 @@ const Home: React.FC = () => {
     <Page>
       <Hero>
         <Heading as="h1" size="xl" mb="24px" color="primary">
-          {TranslateString(576, 'BLIZZARD.MONEY')}
+          {TranslateString(576, 'FARMHIVE.FINANCE')}
         </Heading>
-        <Text>{TranslateString(578, 'The best DEFI app on Binance Smart Chain.')}</Text>
+        <Text>{TranslateString(578, 'The best DEFI app on XDai.')}</Text>
       </Hero>
       <div>
         <Cards>
