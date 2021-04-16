@@ -1,7 +1,7 @@
 import React, { useEffect, Suspense, lazy } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
-import { ResetCSS } from '@blzd-dev/uikit'
+import { ResetCSS } from '@farmhive/uikit'
 import BigNumber from 'bignumber.js'
 import { useFetchPriceList, useFetchPublicData } from 'state/hooks'
 import useGetDocumentTitlePrice from './hooks/useGetDocumentTitlePrice'

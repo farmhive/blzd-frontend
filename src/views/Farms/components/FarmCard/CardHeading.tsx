@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Tag, Flex, Heading, Image } from '@blzd-dev/uikit'
+import { Tag, Flex, Heading, Image } from '@farmhive/uikit'
 import { NoFeeTag } from 'components/Tags'
 
 export interface ExpandableSectionProps {

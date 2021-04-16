@@ -1,4 +1,4 @@
-import { MenuEntry } from '@blzd-dev/uikit'
+import { MenuEntry } from '@farmhive/uikit'
 
 const config: MenuEntry[] = [
   {
