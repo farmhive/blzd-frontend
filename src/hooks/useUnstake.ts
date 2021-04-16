@@ -1,9 +1,7 @@
 import { useCallback } from 'react'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import { useDispatch } from 'react-redux'
-import {
-  fetchFarmUserDataAsync,
-} from 'state/actions'
+import { fetchFarmUserDataAsync } from 'state/actions'
 import { unstake } from 'utils/callHelpers'
 import { useMasterchef } from './useContract'
 
@@ -23,6 +21,5 @@ const useUnstake = (pid: number) => {
 
   return { onUnstake: handleUnstake }
 }
-
 
 export default useUnstake

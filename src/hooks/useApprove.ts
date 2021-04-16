@@ -8,7 +8,6 @@ import { approve } from 'utils/callHelpers'
 import { getxBlzdAddress } from 'utils/addressHelpers'
 import { useMasterchef, useCake, useLottery } from './useContract'
 
-
 // Approve a Farm
 export const useApprove = (lpContract: Contract) => {
   const dispatch = useDispatch()
@@ -27,7 +26,6 @@ export const useApprove = (lpContract: Contract) => {
 
   return { onApprove: handleApprove }
 }
-
 
 // Approve the lottery
 export const useLotteryApprove = () => {
@@ -63,7 +61,6 @@ export const useIfoApprove = (tokenContract: Contract, spenderAddress: string) =
 
   return onApprove
 }
-
 
 // Approve xBLZD
 export const useXBlzdApprove = () => {

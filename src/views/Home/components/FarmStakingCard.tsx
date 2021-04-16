@@ -14,21 +14,19 @@ import circle from '../../../assets/circle-cropped.png'
 
 const StyledFarmStakingCard = styled(Card)`
   &:before {
-
-  background-image: url(${farmer});
-  background-size: 256px;
-  background-repeat: no-repeat;
-  background-position: top right;
-  opacity:0.4;
-  content: "";
-  position: absolute;
-  top: 0; 
-  left: 0;
-  width: 100%; 
-  height: 100%;  
-  opacity: .4; 
-  z-index: -1;
-
+    background-image: url(${farmer});
+    background-size: 256px;
+    background-repeat: no-repeat;
+    background-position: top right;
+    opacity: 0.4;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    z-index: -1;
   }
 
   position: relative;
@@ -116,12 +114,7 @@ const FarmedStakingCard = () => {
           {TranslateString(542, 'Farms & Staking')}
         </Heading>
         <TokenImageWrapper>
-          <CardImage
-            src={circle}
-            alt="blzd logo"
-            width={64}
-            height={64}
-          />
+          <CardImage src={circle} alt="blzd logo" width={64} height={64} />
           <Button onClick={addWatchBlzdToken} scale="sm">
             +{' '}
             <img

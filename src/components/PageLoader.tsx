@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Page from './layout/Page'
 
-import logo from '../assets/logo.png';
+import logo from '../assets/logo.png'
 
 const Wrapper = styled(Page)`
   display: flex;
@@ -34,11 +34,7 @@ const PageLoader: React.FC = () => {
   return (
     <Wrapper>
       <LogoIcon>
-        <img
-          style={{ height: 86 }}
-          src={logo}
-          alt="logo"
-        />
+        <img style={{ height: 86 }} src={logo} alt="logo" />
       </LogoIcon>
     </Wrapper>
   )
